@@ -37,7 +37,7 @@ hash_G=f"""{BLUE}
 def Hash_Generator():
 	os.system("clear")
 	print(hash_G)
-	hash_input = input(RED+"Enter Srings >"+RESET)
+	hash_input = input(RED+"Enter Strings >"+RESET)
 	hash_md5 = hashlib.md5(hash_input.encode('utf-8'))
 	hash_sha1 = hashlib.sha1(hash_input.encode('utf-8'))
 	hash_sha224 = hashlib.sha224(hash_input.encode('utf-8'))
@@ -48,14 +48,14 @@ def Hash_Generator():
 	hash_blake2s = hashlib.blake2s(hash_input.encode('utf-8'))
 
 	if hash_input == "":
-		print(f"{D_RED}Invali Sring{RESET}")
+		print(f"{D_RED}String Not Valid :({RESET}")
 		time.sleep(1)
 		Hash_Generator()
 	else:
 		os.system("clear")
 		print(hash_G)
 		print("")
-		print(f"	     {RED}Sring :{RED} [  {GREEN}{hash_input}{RED}  ]{RESET}")
+		print(f"	     {RED}String :{RED} [  {GREEN}{hash_input}{RED}  ]{RESET}")
 		print("")
 		print(RED+"[+]"+BLUE+" MD5    : "+RED+"[ "+D_BLUE,str(hash_md5.hexdigest()),RED," ]",RESET)
 		print(RED+"[+]"+BLUE+" SHA1   : "+RED+"[ "+D_BLUE,str(hash_sha1.hexdigest()),RED," ]",RESET)
